@@ -1,0 +1,92 @@
+@use "../../vars" as *;
+
+.storedBook {
+  padding: 25px;
+
+  color: $color--lessLight;
+
+  border-top: 1px solid $color--lessLight;
+
+  &--marked {
+    color: $color--lessDark;
+
+    background-color: $color--moreDark;
+  }
+
+  &:last-of-type {
+    border-bottom: 1px solid $color--lessLight;
+  }
+}
+
+.storedBook__title {
+  margin: 0 0 10px;
+
+  font-weight: normal;
+  font-size: 24px;
+  line-height: calc(28 / 24);
+  color: $color--light;
+
+  .storedBook--marked & {
+    color: $color--lessDark;
+  }
+}
+
+.storedBook__subTitle {
+  margin: 0 0 10px;
+
+  font-style: italic;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: calc(22 / 18);
+}
+
+.storedBook__language {
+  font-style: italic;
+}
+
+.storedBook__author {
+  margin: 0 0 10px;
+
+  font-size: 20px;
+  line-height: calc(24 / 24);
+}
+
+.storedBook__control {
+  margin-top: 20px;
+
+  font-family: $fontControl;
+}
+
+.storedBook__btn {
+  margin-right: 10px;
+  padding: 0;
+
+  font-size: 18px;
+  line-height: calc(26 / 18);
+  color: $color--lessLight;
+
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  transition: color $transitionTime;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  .storedBook--marked & {
+    color: $color--lessDark;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $color--light;
+  }
+}
+
+.storedBook__btn.hidden {
+  display: none;
+}

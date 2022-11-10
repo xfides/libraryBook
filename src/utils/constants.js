@@ -1,0 +1,13 @@
+const DELIMITER_STRING_ITEMS = ", ";
+const KeyCodes = {
+  ENTER: "Enter"
+};
+const IDENTIFYING_BOOK_SELECTOR = "data-book-id";
+const NUMBER_ARR_ITEMS_TO_RENDER = 3;
+
+export {
+  DELIMITER_STRING_ITEMS,
+  KeyCodes,
+  IDENTIFYING_BOOK_SELECTOR,
+  NUMBER_ARR_ITEMS_TO_RENDER
+}

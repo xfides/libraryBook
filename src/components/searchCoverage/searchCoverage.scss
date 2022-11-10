@@ -1,0 +1,63 @@
+@use "../../vars" as *;
+
+.searchCoverage {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 25px;
+  min-height: 150px;
+
+  color: $color--moreLight;
+
+  background-color: $color--dark;
+}
+
+.searchCoverage__content.hidden {
+  display: none;
+}
+
+.searchCoverage__blockInfo {
+  margin: 0 15px 0 0;
+  padding: 0;
+
+  font-size: 14px;
+  line-height: calc(18 / 12);
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.searchCoverage__value {
+  font-weight: bold;
+}
+
+.searchCoverage__blockControl {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.searchCoverage__btn {
+  @include btnStyleEffect;
+
+  margin-right: 10px;
+  margin-bottom: 10px;
+
+  font-size: 16px;
+  line-height: calc(24 / 16);
+  font-family: $fontControl;
+
+  border: none;
+  outline: none;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: $widthTablet) {
+  .searchCoverage {
+    justify-content: center;
+
+    text-align: center;
+  }
+}

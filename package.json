@@ -1,0 +1,18 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "DataArt. To Read List",
+  "scripts": {
+    "start": "parcel src/index.html --out-dir _parcel/output --cache-dir _parcel/cache --open"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "1.12.5",
+    "sass": "1.56.1"
+  },
+  "dependencies": {},
+  "browserslist": [
+    "last 1 Chrome version"
+  ]
+}

@@ -1,0 +1,68 @@
+@use "../../vars" as *;
+
+.searchQuery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 25px;
+
+  font-size: 24px;
+  line-height: calc(28 / 24);
+
+  background-color: $color--dark;
+
+  &--loading {
+    background: linear-gradient(90deg, $color--dark 0%, $color--moreDark 20%, $color--dark 30%);
+    background-size: 200% 100%;
+
+    animation: backgroundLoading 1s linear infinite;
+  }
+
+  &--error {
+    background: $color--error;
+
+    transition: background-color $transitionTime;
+  }
+}
+
+.searchQuery__input {
+  flex-grow: 1;
+  width: 55%;
+  min-width: 100px;
+  margin: 5px;
+  padding: 5px;
+
+  color: $color--moreDark;
+
+  background-color: $color--moreLight;
+  border: none;
+  outline: 4px solid transparent;
+
+  transition: outline-color $transitionTime;
+
+  &:hover,
+  &:active,
+  &:focus {
+    outline: 4px solid $color--lessLight;
+  }
+}
+
+.searchQuery__btn {
+  @include btnStyleEffect;
+
+  margin: 5px;
+  padding: 5px 10px;
+
+  font-family: $fontControl;
+  color: $color--moreDark;
+  text-transform: uppercase;
+
+  border: none;
+  outline: none;
+}
+
+@keyframes backgroundLoading {
+  100% {
+    background-position-x: -200%;
+  }
+}

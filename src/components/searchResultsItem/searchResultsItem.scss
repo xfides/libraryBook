@@ -1,0 +1,72 @@
+@use "../../vars" as *;
+
+.searchResultsItem {
+  position: relative;
+
+  height: 125px;
+  padding: 25px;
+  overflow: hidden;
+
+  font-weight: normal;
+
+  border-top: 1px solid $color--lessLight;
+  border-bottom: 1px solid $color--lessLight;
+
+  transition: all $transitionTime;
+
+  &--active {
+    color: $color--moreLight;
+
+    background: linear-gradient(-90deg, $color--dark 0%, $color--moreDark 100%);
+    border-top: 1px solid $color--moreLight;
+    border-bottom: 1px solid $color--moreLight;
+  }
+
+  &:hover {
+    color: $color--moreLight;
+  }
+
+  &:first-of-type {
+    border-top: 1px solid transparent;
+  }
+
+  &:last-of-type {
+    border-bottom: 1px solid transparent;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    display: block;
+    width: 100%;
+    height: 50%;
+
+    background: transparent;
+    background: linear-gradient(180deg, rgba(164, 167, 30, 0) 0%, $color--lessDark 100%);
+
+    pointer-events: none;
+  }
+}
+
+.searchResultsItem__title {
+  margin: 0 0 15px;
+
+  font-weight: normal;
+  font-size: 24px;
+  line-height: calc(28 / 24);
+}
+
+.searchResultsItem__subTitle {
+  margin: 0;
+
+  font-weight: normal;
+  font-size: 18px;
+  line-height: calc(22 / 18);
+}
+
+.searchResultsItem__language {
+  font-style: italic;
+}

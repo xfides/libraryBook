@@ -1,0 +1,84 @@
+@use "../../vars" as *;
+
+.appBook {
+  padding: 0 30px 50px;
+
+  color: $color--lessLight;
+}
+
+.appBook__title {
+  margin: 25px 0 10px;
+
+  font-size: 44px;
+  line-height: calc(52 / 44);
+}
+
+.appBook__subTitle {
+  margin-top: 0;
+  margin-bottom: 50px;
+
+  font-style: italic;
+  font-size: 18px;
+  line-height: calc(24 / 18);
+}
+
+.appBook__block {
+  margin: 15px 0;
+
+  font-size: 24px;
+  line-height: calc(30 / 24);
+  color: $color--light;
+}
+
+.appBook__block.hidden {
+  display: none;
+}
+
+.appBook__blockKey {
+  font-style: italic;
+  margin-right: 10px;
+}
+
+.appBook__blockValue {
+  font-weight: bold;
+}
+
+.appBook__control {
+  margin-top: 50px;
+}
+
+.appBook__control.hidden {
+  display: none;
+}
+
+.appBook__btn {
+  font-size: 28px;
+  line-height: calc(36 / 28);
+  font-family: $fontControl;
+  color: $color--lessDark;
+
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  transition: color $transitionTime;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $color--light;
+  }
+
+  &:disabled {
+    display: none;
+  }
+}
+
+
+@media (max-width: $widthTablet) {
+  .appBook {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}

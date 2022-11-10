@@ -1,0 +1,11 @@
+@use "../../vars" as *;
+
+.searchResults {
+  @include defaultList;
+
+  margin: 0;
+
+  color: $color--light;
+}
+
+

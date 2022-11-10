@@ -1,0 +1,44 @@
+//   ---   fonts   ---
+$fontControl: "Impact", "Charcoal", sans-serif;
+$fontCommon: "Trebuchet MS", "Helvetica", sans-serif;
+
+//   ---   width   ---
+$widthTablet: 1024px;
+
+//   ---   colors   ---
+$color--moreLight: #ffffff;
+$color--light: #d6ce15;
+$color--lessLight: #a4a71e;
+$color--lessDark: #53900f;
+$color--dark: #1f6521;
+$color--moreDark: #1f2605;
+$color--error: #ff0000;
+
+//   ---   transformation time   ---
+$transitionTime: 0.2s;
+
+//   ---   mixins   ---
+@mixin defaultList {
+  padding: 0;
+
+  list-style-type: none;
+}
+
+@mixin btnStyleEffect {
+  background-color: $color--light;
+  cursor: pointer;
+
+  transition: background-color $transitionTime;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $color--moreLight;
+  }
+
+  &:disabled {
+    color: $color--dark;
+
+    background-color: $color--lessDark;
+  }
+}
